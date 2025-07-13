@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón Bitcoiner</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo base para la fuente y el tema oscuro */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #f3f4f6; /* text-gray-100 */
+            padding-top: 60px; /* Espacio para la barra de navegación fija */
+        }
+        /* Estilo para los contenedores de las secciones */
+        .content-card {
+            background-color: #1f2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            height: 100%; 
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.1), 0 4px 6px -2px rgba(249, 115, 22, 0.05);
+        }
+        /* Estilo para los títulos de las secciones */
+        .section-title {
+            color: #f97316; /* text-orange-500 */
+            font-weight: 700;
+            font-size: 1.5rem; /* text-2xl */
+            border-bottom: 2px solid #374151; /* border-gray-700 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Estilo para la barra de navegación */
+        nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Barra de Navegación Fija -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 border-b border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center h-16">
+                <div class="flex space-x-2 sm:space-x-6 text-sm sm:text-base">
+                    <a href="#que-es-bitcoin" class="text-gray-300 hover:text-orange-500 transition-colors duration-300 px-3 py-2 rounded-md font-medium">¿Qué es?</a>
+                    <a href="#indicadores-clave" class="text-gray-300 hover:text-orange-500 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Indicadores</a>
+                    <a href="#valor-largo-plazo" class="text-gray-300 hover:text-orange-500 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Valor</a>
+                    <a href="#estrategia-hodl" class="text-gray-300 hover:text-orange-500 transition-colors duration-300 px-3 py-2 rounded-md font-medium">HODL</a>
+                    <a href="#auto-custodia" class="text-gray-300 hover:text-orange-500 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Auto-Custodia</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal -->
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <!-- Cabecera -->
+        <header class="text-center mb-8 md:mb-12 pt-8">
+            <div class="flex justify-center items-center gap-4">
+                <svg class="w-12 h-12 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M21.905 10.748c.472-2.59-1.33-4.133-4.045-5.107l.68-2.723-1.74-.435-.665 2.663c-.535-.134-1.078-.265-1.62-.395l.67-2.68-1.74-.435-.68 2.723c-.458-.108-.91-.212-1.352-.314l-2.134-.002.39 1.56s1.29.303 1.257.32c.625.157.843.63.822 1.01l-1.04 4.162c-.05.15-.27.36-.6.45l.002-.01-1.4-.35.723-2.894c-.08-.02-1.122-.28-1.122-.28l-2.133.53.795 3.18c.05.2.22.38.52.47l-.52-.47c.59.15 1.16.29 1.73.43l-.69 2.762 1.74.435.69-2.76c.56.15.11.025 1.68.41l-.69 2.76 1.74.435.69-2.76c2.8.59 4.82 1.95 5.48 4.54.58 2.29-.38 3.8-2.31 4.85.83.63 1.18 1.57 1 2.92-.17 1.3-1.17 2.38-2.91 2.92l-.69 2.76 1.74.435.69-2.76c.56.12 1.11.23 1.65.34l-.68 2.724 1.74.435.68-2.723c4.42-.87 7.14-3.53 7.14-7.82 0-3.45-1.84-6.3-4.88-7.5zm-3.52 9.4c-2.12-.53-3.02-1.62-2.7-3.4.32-1.78 1.77-2.84 3.88-2.31 2.12.53 3.02 1.62 2.7 3.4s-1.76 2.85-3.88 2.31zm.55-8.52c-1.8-.45-2.5-1.3-2.27-2.85.22-1.55 1.48-2.45 3.28-2 1.8.45 2.5 1.3 2.27 2.85s-1.48 2.45-3.28 2z"/></svg>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">El Rincón Bitcoiner</h1>
+            </div>
+            <p class="mt-4 text-lg text-gray-400">Tu guía completa para entender Bitcoin.</p>
+        </header>
+
+        <!-- Gráfico de TradingView -->
+        <section class="mb-8 md:mb-12">
+            <div class="tradingview-widget-container h-[350px] md:h-[550px]">
+                <div id="tradingview_chart" class="h-full w-full"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget({ "autosize": true, "symbol": "BITSTAMP:BTCUSD", "interval": "D", "timezone": "Etc/UTC", "theme": "dark", "style": "1", "locale": "es", "toolbar_bg": "#f1f3f6", "enable_publishing": false, "allow_symbol_change": true, "container_id": "tradingview_chart" });
+                </script>
+            </div>
+        </section>
+
+        <!-- Contenido Principal -->
+        <div id="info-grid" class="space-y-8">
+            <article id="que-es-bitcoin" class="content-card">
+                <h2 class="section-title">¿Qué es Bitcoin?</h2>
+                <div class="space-y-4 text-gray-300 text-base">
+                    <p>Bitcoin es la primera <strong>moneda digital descentralizada y el primer sistema de pago global peer-to-peer (P2P)</strong>. Fue presentado en 2008 por una persona o grupo bajo el seudónimo de <strong>Satoshi Nakamoto</strong> en el famoso "Whitepaper de Bitcoin".</p>
+                    <p>A diferencia del dinero tradicional (dólar, euro), no es controlado por ningún banco central o gobierno. Funciona sobre una red de computadoras distribuidas por todo el mundo, lo que la hace resistente a la censura y a la manipulación. Todas las transacciones se agrupan en "bloques" y se registran de forma permanente en un libro contable público e inmutable llamado <strong>Blockchain</strong>. Cada bloque se añade a la cadena aproximadamente cada 10 minutos a través de un proceso computacional llamado "minería".</p>
+                    <p>La característica más revolucionaria es su <strong>escasez digital programada</strong>: solo existirán 21 millones de bitcoins. Esta política monetaria predecible y finita es el pilar de su propuesta de valor.</p>
+                </div>
+            </article>
+
+            <!-- Nueva Sección de Indicadores Clave -->
+            <section id="indicadores-clave" class="content-card">
+                <h2 class="section-title">Indicadores Clave de Bitcoin</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Dominancia de Bitcoin -->
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-2">Dominancia de Bitcoin</h3>
+                        <div class="h-48 mb-4">
+                            <div class="tradingview-widget-container h-full">
+                                <div class="tradingview-widget-container__widget h-full"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                { "symbol": "CRYPTOCAP:BTC.D", "width": "100%", "height": "100%", "locale": "es", "dateRange": "12M", "colorTheme": "dark", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                                </script>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm">Mide el peso de Bitcoin sobre el mercado total de criptomonedas. Una dominancia alta sugiere que el capital fluye hacia Bitcoin, considerándose un refugio.</p>
+                    </div>
+                    <!-- Capitalización de Mercado de Bitcoin -->
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-2">Capitalización de Mercado de Bitcoin</h3>
+                        <div class="h-48 mb-4">
+                            <div class="tradingview-widget-container h-full">
+                                <div class="tradingview-widget-container__widget h-full"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                { "symbol": "CRYPTOCAP:BTC", "width": "100%", "height": "100%", "locale": "es", "dateRange": "12M", "colorTheme": "dark", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                                </script>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm">El valor total de todos los bitcoins en circulación. Se calcula multiplicando el precio actual de Bitcoin por la cantidad de monedas minadas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <article id="valor-largo-plazo" class="content-card">
+                <h2 class="section-title">Valor a Largo Plazo: Oro Digital 2.0</h2>
+                <div class="space-y-4 text-gray-300 text-base">
+                    <p>La tesis de inversión en Bitcoin se basa en su consolidación como una <strong>reserva de valor superior</strong>, a menudo llamado "Oro Digital". Para que algo funcione como dinero, debe tener ciertas propiedades: durabilidad, portabilidad, divisibilidad, uniformidad, escasez y aceptabilidad. Bitcoin sobresale en casi todas ellas, superando al oro en portabilidad, divisibilidad y escasez (es absolutamente finito).</p>
+                    <p>Mientras las monedas fiduciarias pierden poder adquisitivo debido a la inflación (impresión ilimitada de dinero por parte de los gobiernos), la oferta de Bitcoin es fija. Además, su emisión se reduce a la mitad cada cuatro años en un evento llamado <strong>Halving</strong>, un choque de oferta programado que históricamente ha precedido a grandes ciclos alcistas.</p>
+                    <p>Por estas razones, Bitcoin no es solo una tecnología de pago, sino una <strong>póliza de seguro contra la irresponsabilidad monetaria</strong> y una herramienta para preservar la riqueza a través de generaciones en un mundo cada vez más digital.</p>
+                </div>
+            </article>
+
+            <article id="estrategia-hodl" class="content-card">
+                <h2 class="section-title">La Estrategia HODL: Fortaleza a Largo Plazo</h2>
+                <div class="space-y-4 text-gray-300 text-base">
+                    <p><strong>HODL</strong> nació de un error tipográfico en un foro de Bitcoin en 2013 durante una caída del mercado. Un usuario, en lugar de escribir "I AM HOLDING" (estoy manteniendo), escribió "I AM HODLING". El término se convirtió en un mantra que representa la estrategia de <strong>comprar Bitcoin y mantenerlo a largo plazo</strong>, resistiendo la tentación de vender durante la volatilidad.</p>
+                    <p>Esta estrategia se basa en la convicción de que el valor fundamental de Bitcoin aumentará con el tiempo debido a su escasez y creciente adopción. HODL refleja una <strong>baja preferencia temporal</strong>: la capacidad de valorar más una recompensa futura mayor que una recompensa presente menor. En lugar de buscar ganancias rápidas con el trading, el HODLer busca preservar y aumentar su capital a lo largo de los años.</p>
+                    <p>Beneficios clave: reduce el estrés, evita malas decisiones emocionales y alinea al inversor con la tesis principal de Bitcoin como reserva de valor a largo plazo.</p>
+                </div>
+            </article>
+
+            <article id="auto-custodia" class="content-card">
+                <h2 class="section-title">Auto-Custodia: Sé Tu Propio Banco</h2>
+                <div class="space-y-4 text-gray-300 text-base">
+                    <p>La frase más importante en Bitcoin es: <strong class="text-orange-400">"Not your keys, not your coins"</strong> (No son tus llaves, no son tus monedas). Si dejas tus bitcoins en un exchange (plataforma de intercambio), en realidad no los posees; simplemente tienes una promesa de que te los darán si los pides. Estás confiando en un tercero.</p>
+                    <p>La auto-custodia significa tomar el control total de tus activos. Esto se logra gestionando tus propias <strong>llaves privadas</strong>, que son la contraseña secreta que te da derecho a gastar tus fondos. Estas llaves se derivan de una <strong>frase semilla (o frase de recuperación)</strong>, un conjunto de 12 o 24 palabras que actúa como la clave maestra de tu monedero.</p>
+                    <p>Al custodiar tu propia frase semilla (idealmente en un dispositivo offline como una hardware wallet), obtienes <strong>soberanía financiera real</strong>. Nadie puede congelar, confiscar o robar tus fondos sin acceso a esas palabras. Es una gran libertad, pero también una gran responsabilidad: eres el único responsable de su seguridad.</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pie de Página -->
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 El Rincón Bitcoiner.</p>
+            <p class="text-sm mt-2">Esto no es consejo financiero. Realiza tu propia investigación.</p>
+        </footer>
+    </div>
+</body>
+</html>
