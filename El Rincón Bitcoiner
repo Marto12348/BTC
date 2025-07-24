@@ -165,7 +165,7 @@
 
         <!-- Pie de Página -->
         <footer class="text-center mt-12 text-gray-500">
-            <p>&copy; 2025 El Rincón Bitcoiner. Página creada por Martin Lasebnik.</p>
+            <p>&copy; 2025 El Rincón Bitcoiner. Página creada por Martin Lasebnik .</p>
             <p class="text-sm mt-2">Esto no es consejo financiero. Realiza tu propia investigación.</p>
         </footer>
     </div>
